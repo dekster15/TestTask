@@ -44,7 +44,7 @@ foreach ($reader as $row) {
 }
 
 //Виидалення першого запису з таблиці
-// $pdo->exec("delete from test where id = (select id from test order by id LIMIT 0,1)");
+ $pdo->exec("delete from test where id = (select id from test order by id LIMIT 0,1)");
 
 //Перенесення даних в окремі таблиці
 $pdo->exec("INSERT INTO customer(name, surename, account, count_workers, description2) SELECT test.name, test.surename, test.account, test.count_workers, test.description FROM test ");
