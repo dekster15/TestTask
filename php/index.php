@@ -31,7 +31,7 @@ if (empty($_REQUEST['sort'])) {
 /**
  * Імпорт з Exel файла в одну таблицю
  */
-/*
+
 foreach ($reader as $row) {
     $stmt = $pdo->exec("INSERT INTO test
       (name, surename, email, phone, tariff, date, sex, country, city, account, 
@@ -66,7 +66,7 @@ $pdo->exec("update contacts, test, city set contacts.id_city = city.id_city
                       where test.city = city.city_name and test.email = contacts.email");
 $pdo->exec("update customer, test, coordinator set customer.id_coordinator = coordinator.id_coordinator
                       where test.coordinator = coordinator.coordinator_name and test.surename = customer.surename");
-*/
+
 /**
  * Вивід всіх даних з таблиць
  */
